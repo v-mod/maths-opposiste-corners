@@ -1,8 +1,10 @@
 rootnum=1
 linenum=0
 endrootnum=8
-for linenum in range(0,8):
+while True:
     for x in range(int(str(linenum)+str(rootnum)),int(str(linenum)+str(endrootnum))):
+        print(int(str(linenum)+str(rootnum)))
+        print(int(str(linenum)+str(endrootnum)))
         topleft=rootnum
         topright=rootnum+2
         botleft=rootnum+10
@@ -17,3 +19,5 @@ for linenum in range(0,8):
         print(str(topleft)+'    '+str(topright))
         print(str(botleft)+'    '+str(botright))
         print(str(bckdg)+' - '+str(fwddg)+' = '+str(dif))
+        rootnum=rootnum+1
+    linenum=linenum+1
