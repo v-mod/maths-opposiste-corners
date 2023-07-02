@@ -1,20 +1,20 @@
-rootnum=1
+# X is width
+# Y is height
+
+startrootnum=1
 linenum=0
-endrootnum=8
+x=input('x: ')
+y=input('y: ')
+endrootnum=10-(x-1)
 while True:
-    for x in range(int(str(linenum)+str(rootnum)),int(str(linenum)+str(endrootnum))):
-        print(int(str(linenum)+str(rootnum)))
-        print(int(str(linenum)+str(endrootnum)))
+    for l in range(int(str(linenum)+str(startrootnum)),int(str(linenum)+str(endrootnum))):
         topleft=rootnum
-        topright=rootnum+2
-        botleft=rootnum+10
-        botright=rootnum+12
+        topright=rootnum+(x-1)
+        botleft=rootnum+10*(y-1)
+        botright=rootnum+(x-1)+(10*(y-1))
         bckdg=topleft*botright
         fwddg=topright*botleft
-        if bckdg > fwddg:
-            dif=bckdg-fwddg
-        elif bckdg < fwddg:
-            dif=fwddg-bckdg
+        dif=bckdg-fwddg
         print('Constructed Rectangle: ')
         print(str(topleft)+'    '+str(topright))
         print(str(botleft)+'    '+str(botright))
